@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react';
-
+import {Button} from 'react-bootstrap'
 export const Home = () => {
   const [count, setCount] = useState(1);
   const [buttonDisable,setButtonDisable] = useState(false)
@@ -20,8 +20,8 @@ export const Home = () => {
     <>
     <h1>Home component</h1>
     <p>Count: {count}</p>
-    <button onClick={handleIncrement}>Increase</button>
-    <button onClick={handledecrement} disabled={buttonDisable} style={{margin:"20px"}}>Decrease</button>
+    <Button variant="secondary" onClick={handleIncrement}>Increase</Button>
+    <Button variant="warning" onClick={handledecrement} disabled={buttonDisable} style={{margin:"20px"}}>Decrease</Button>
     </>
   )
 }
